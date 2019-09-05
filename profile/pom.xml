@@ -10,6 +10,7 @@
 		<version>0.9.49</version>
 	</parent>
 	<artifactId>broadleaf-profile</artifactId>
+	<name>BroadleafCommerceProfile</name>
 	<dependencies>
 		<dependency>
 			<groupId>commons-logging</groupId>
