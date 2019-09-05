@@ -76,7 +76,7 @@ public class CheckoutTest extends BaseTest {
         group.setMethod("standard");
         groups.add(group);
         order.setFulfillmentGroups(groups);
-        Money total = new Money(5D);
+        Money total = new Money(8.5D);
         group.setShippingPrice(total);
 
         DiscreteOrderItem item = new DiscreteOrderItemImpl();
@@ -87,7 +87,7 @@ public class CheckoutTest extends BaseTest {
         items.add(item);
         order.setOrderItems(items);
 
-        order.setTotalShipping(new Money(5D));
+        order.setTotalShipping(new Money(8.5D));
 
         PaymentInfo payment = new PaymentInfoImpl();
         Address address = new AddressImpl();
@@ -101,12 +101,14 @@ public class CheckoutTest extends BaseTest {
         state.setAbbreviation("TX");
         address.setState(state);
         payment.setAddress(address);
-        payment.setAmount(new Money(15D + (15D * 0.05D)));
+        payment.setAmount(new Money(18.5D + (18.5D * 0.05D)));
         payment.setReferenceNumber("1234");
+        payment.setType(PaymentInfoType.CREDIT_CARD);
+        payment.setOrder(order);
 
         CreditCardPaymentInfo cc = (CreditCardPaymentInfo) securePaymentInfoService.create(PaymentInfoType.CREDIT_CARD);
         cc.setExpirationMonth(11);
-        cc.setExpirationYear(2011);
+        cc.setExpirationYear(2030);
         cc.setPan("1111111111111111");
         cc.setCvvCode("123");
         cc.setReferenceNumber("1234");

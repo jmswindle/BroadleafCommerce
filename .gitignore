@@ -12,3 +12,4 @@ BroadleafCommerce.ipr
 out/*
 .metadata
 /bin/
+test-output/

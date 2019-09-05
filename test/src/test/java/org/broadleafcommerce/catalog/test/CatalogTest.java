@@ -40,7 +40,7 @@ public class CatalogTest extends BaseTest {
     @Resource
     private ProductDao productDao;
 
-    @Test
+    @Test(dependsOnGroups= { "createProducts" })
     public void testCatalog() throws Exception {
         Category category = new CategoryImpl();
         category.setName("Soaps");

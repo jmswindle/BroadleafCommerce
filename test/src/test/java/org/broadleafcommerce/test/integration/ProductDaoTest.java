@@ -39,14 +39,15 @@ public class ProductDaoTest extends BaseTest {
     @Test(groups="createProducts", dataProvider="setupProducts", dataProviderClass=ProductDataProvider.class)
     @Rollback(false)
     public void createProducts(Product product){
-        productDao.save(product);
+        product = productDao.save(product);
         assert(product.getId() != null);
+        assert(product.getId() <= 7L);
     }
 
     @Test(groups="createUpSaleValues", dataProvider="basicUpSaleValue", dataProviderClass=ProductDataProvider.class, dependsOnGroups="createProducts")
     @Rollback(false)
     public void createUpSaleValues(Product product){
-        productDao.save(product);
+    	product = productDao.save(product);
         assert(product.getId() != null);
     }
 
@@ -67,7 +68,7 @@ public class ProductDaoTest extends BaseTest {
     @Test(groups="createCrossSaleValues", dataProvider="basicCrossSaleValue", dataProviderClass=ProductDataProvider.class, dependsOnGroups="testReadProductsWithUpSaleValues")
     @Rollback(false)
     public void createCrossSaleValues(Product product){
-        productDao.save(product);
+    	product = productDao.save(product);
         assert(product.getId() != null);
     }
 
@@ -85,14 +86,14 @@ public class ProductDaoTest extends BaseTest {
         }
     }
 
-    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class)
+    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class, dependsOnGroups="createProducts")
     public void testReadProductsById(Product product) {
         product = productDao.save(product);
         Product result = productDao.readProductById(product.getId());
         assert product.equals(result);
     }
 
-    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class)
+    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class, dependsOnGroups="createProducts")
     public void testReadProductsByName(Product product) {
         String name = product.getName();
         product = productDao.save(product);
@@ -100,7 +101,7 @@ public class ProductDaoTest extends BaseTest {
         assert result.contains(product);
     }
 
-    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class)
+    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class, dependsOnGroups="createProducts")
     public void testFeaturedProduct(Product product) {
         product = productDao.save(product);
         Long productId = product.getId();
@@ -110,7 +111,7 @@ public class ProductDaoTest extends BaseTest {
         assert (testProduct.getIsFeaturedProduct() == true);
     }
 
-    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class)
+    @Test(dataProvider="basicProduct", dataProviderClass=ProductDataProvider.class, dependsOnGroups="createProducts")
     public void testProductAttributes(Product product) {
         product = productDao.save(product);
         product.setWidth(new BigDecimal(25.5));

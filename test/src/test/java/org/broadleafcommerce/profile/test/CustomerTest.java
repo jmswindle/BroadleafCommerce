@@ -44,7 +44,7 @@ public class CustomerTest extends BaseTest {
     List<String> userNames = new ArrayList<String>();
 
     @Test(groups = { "createCustomerIdGeneration" })
-    @Rollback(false)
+    @Rollback(true)
     public void createCustomerIdGeneration() {
         IdGeneration idGeneration = new IdGenerationImpl();
         idGeneration.setType("org.broadleafcommerce.profile.domain.Customer");

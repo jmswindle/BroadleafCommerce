@@ -37,7 +37,7 @@ public class CategoryDaoTest extends BaseTest {
     @Resource
     private ProductDao productDao;
 
-    @Test(groups =  {"testSetFeaturedProducts"}, dataProvider="basicCategory", dataProviderClass=CategoryDaoDataProvider.class)
+    @Test(groups =  {"testSetFeaturedProducts"}, dataProvider="basicCategory", dataProviderClass=CategoryDaoDataProvider.class, dependsOnGroups = { "createProducts" })
     public void testSetFeaturedProducts(Category category) {
         category = categoryDao.save(category);
 
