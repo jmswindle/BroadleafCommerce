@@ -25,17 +25,22 @@ import org.broadleafcommerce.profile.web.CookieUtils;
 import org.broadleafcommerce.profile.web.CustomerCookie;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.rememberme.AbstractRememberMeServices;
 import org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationException;
 
 public class BroadleafRememberMeServices extends AbstractRememberMeServices {
 
-    @Resource(name="blCustomerService")
+	@Resource(name="blCustomerService")
     private CustomerService customerService;
 
     @Resource(name="blCookieUtils")
     private CookieUtils cookieUtils;
+    
+    protected BroadleafRememberMeServices(String key, UserDetailsService userDetailsService) {
+		super(key, userDetailsService);
+	}
 
     @Override
     protected void onLoginSuccess(HttpServletRequest request, HttpServletResponse response, Authentication successfulAuthentication) {

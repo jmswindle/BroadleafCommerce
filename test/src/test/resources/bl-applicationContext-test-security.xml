@@ -13,11 +13,11 @@
 	     password against the Broadleaf Commerce customer tables. -->
     <!--=============================================================================================== -->
     <bean id="authenticationManager" class="org.springframework.security.authentication.ProviderManager">
-        <property name="providers">
+        <constructor-arg name="providers">
             <list>
                 <ref bean="daoAuthenticationProvider"/>
             </list>
-        </property>
+        </constructor-arg>
     </bean>
 
 

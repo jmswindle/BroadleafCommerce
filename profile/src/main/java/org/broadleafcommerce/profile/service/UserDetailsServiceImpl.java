@@ -23,7 +23,7 @@ import javax.annotation.Resource;
 import org.broadleafcommerce.profile.domain.CustomerRole;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.GrantedAuthority;
-import org.springframework.security.core.authority.GrantedAuthorityImpl;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -59,7 +59,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
             if (forcePasswordChange) {
                 returnUser = new User(username, customer.getPassword(), true, true, !customer.isPasswordChangeRequired(), true, grantedAuthorities);
             } else {
-                grantedAuthorities.add(new GrantedAuthorityImpl("ROLE_PASSWORD_CHANGE_REQUIRED"));
+                grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_PASSWORD_CHANGE_REQUIRED"));
                 returnUser = new User(username, customer.getPassword(), true, true, true, true, grantedAuthorities);
             }
         } else {
@@ -74,9 +74,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
 
     protected List<GrantedAuthority> createGrantedAuthorities(List<CustomerRole> customerRoles) {
         List<GrantedAuthority> grantedAuthorities = new ArrayList<GrantedAuthority>();
-        grantedAuthorities.add(new GrantedAuthorityImpl("ROLE_USER"));
+        grantedAuthorities.add(new SimpleGrantedAuthority("ROLE_USER"));
         for (CustomerRole role : customerRoles) {
-            grantedAuthorities.add(new GrantedAuthorityImpl(role.getRoleName()));
+            grantedAuthorities.add(new SimpleGrantedAuthority(role.getRoleName()));
         }
         return grantedAuthorities;
     }

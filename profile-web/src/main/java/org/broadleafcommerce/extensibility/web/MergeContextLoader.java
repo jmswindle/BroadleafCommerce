@@ -92,23 +92,20 @@ public class MergeContextLoader extends ContextLoader {
 	 * @see ConfigurableWebApplicationContext
 	 */
 	@Override
-	protected WebApplicationContext createWebApplicationContext(ServletContext servletContext, ApplicationContext parent) throws BeansException {
-		MergeXmlWebApplicationContext wac = new MergeXmlWebApplicationContext();
-		wac.setParent(parent);
-		wac.setServletContext(servletContext);
-		wac.setConfigLocation(servletContext.getInitParameter(CONFIG_LOCATION_PARAM));
-		wac.setPatchLocation(servletContext.getInitParameter(PATCH_LOCATION_PARAM));
-		wac.setShutdownBean(servletContext.getInitParameter(SHUTDOWN_HOOK_BEAN));
-		wac.setShutdownMethod(servletContext.getInitParameter(SHUTDOWN_HOOK_METHOD));
-		customizeContext(servletContext, wac);
-		wac.refresh();
-
-		return wac;
+	protected void configureAndRefreshWebApplicationContext(ConfigurableWebApplicationContext wac, ServletContext servletContext) {
+		MergeXmlWebApplicationContext newWac = (MergeXmlWebApplicationContext) wac;
+		newWac.setServletContext(servletContext);
+		newWac.setConfigLocation(servletContext.getInitParameter(CONFIG_LOCATION_PARAM));
+		newWac.setPatchLocation(servletContext.getInitParameter(PATCH_LOCATION_PARAM));
+		newWac.setShutdownBean(servletContext.getInitParameter(SHUTDOWN_HOOK_BEAN));
+		newWac.setShutdownMethod(servletContext.getInitParameter(SHUTDOWN_HOOK_METHOD));
+		customizeContext(servletContext, newWac);
+		newWac.refresh();
 	}
 
 	@Override
 	protected WebApplicationContext createWebApplicationContext(ServletContext servletContext) throws BeansException {
-		return this.createWebApplicationContext(servletContext, null);
+		return new MergeXmlWebApplicationContext(); 
 	}
 
 }
