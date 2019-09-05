@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="2" name="Failed suite [BroadleafCommerce Test Suite]">
+  <test name="commerce-integrationtest(failed)">
+    <classes>
+      <class name="org.broadleafcommerce.profile.test.CustomerAddressTest">
+        <methods>
+          <include name="readCustomerAddressByUserId"/>
+          <include name="createCustomerAddress"/>
+          <include name="springTestContextAfterTestClass"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.CustomerAddressTest -->
+      <class name="org.broadleafcommerce.profile.test.PhoneTest">
+        <methods>
+          <include name="createPhone"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="readPhoneById"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.PhoneTest -->
+      <class name="org.broadleafcommerce.profile.test.CustomerTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="readCustomersById"/>
+          <include name="setup"/>
+          <include name="createCustomer"/>
+          <include name="changeCustomerPasswords"/>
+          <include name="readCustomersByUsername2"/>
+          <include name="readCustomersByUsername1"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="createCustomerIdGeneration"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.CustomerTest -->
+      <class name="org.broadleafcommerce.test.integration.OrderDaoTest">
+        <methods>
+          <include name="readOrdersForCustomer"/>
+          <include name="createOrder"/>
+          <include name="readOrderById"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="deleteOrderForCustomer"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.OrderDaoTest -->
+      <class name="org.broadleafcommerce.email.test.EmailTest">
+        <methods>
+          <include name="setupEmailTest"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="tearDownEmailTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.email.test.EmailTest -->
+      <class name="org.broadleafcommerce.profile.test.RegisterCustomerControllerTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="tearDownControllerTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="setupControllerTest"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.RegisterCustomerControllerTest -->
+      <class name="org.broadleafcommerce.pricing.test.PricingTest">
+        <methods>
+          <include name="testShippingInsert"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="testPricing"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="testShipping"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.pricing.test.PricingTest -->
+      <class name="org.broadleafcommerce.test.integration.OfferServiceTest">
+        <methods>
+          <include name="applyOffersToOrder"/>
+          <include name="springTestContextAfterTestClass"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.OfferServiceTest -->
+      <class name="org.broadleafcommerce.dependency.test.DependencyTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.dependency.test.DependencyTest -->
+      <class name="org.broadleafcommerce.profile.test.CustomerPhoneControllerTest">
+        <methods>
+          <include name="createCustomerPhoneFromController"/>
+          <include name="makePhoneDefaultOnCustomerPhoneController"/>
+          <include name="viewCustomerPhoneFromController"/>
+          <include name="viewExistingCustomerPhoneFromController"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="readCustomerPhoneFromController"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.CustomerPhoneControllerTest -->
+      <class name="org.broadleafcommerce.test.integration.MVELTest">
+        <methods>
+          <include name="testOfferAppliesToSpecificItems"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="testOfferAppliesToFulfillmentGroup"/>
+          <include name="testBasicMVELFunctions"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="testOfferAppliesToItemsInCategoryAndOrderValueGreaterThanFifty"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.MVELTest -->
+      <class name="org.broadleafcommerce.test.integration.SkuDaoTest">
+        <methods>
+          <include name="createSku"/>
+          <include name="readSkuById"/>
+          <include name="readFirstSku"/>
+          <include name="springTestContextAfterTestClass"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.SkuDaoTest -->
+      <class name="org.broadleafcommerce.test.integration.FulfillmentGroupDaoTest">
+        <methods>
+          <include name="readDefaultFulfillmentGroupForOrder"/>
+          <include name="readFulfillmentGroupsForId"/>
+          <include name="createFulfillmentGroup"/>
+          <include name="createDefaultFulfillmentGroup"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="readDefaultFulfillmentGroupForId"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.FulfillmentGroupDaoTest -->
+      <class name="org.broadleafcommerce.test.integration.ExtensibilityTest">
+        <methods>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="test"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.ExtensibilityTest -->
+      <class name="org.broadleafcommerce.catalog.test.CatalogTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.catalog.test.CatalogTest -->
+      <class name="org.broadleafcommerce.test.integration.OrderTest">
+        <methods>
+          <include name="addItemToOrder"/>
+          <include name="addFulfillmentGroupToOrderFirst"/>
+          <include name="testReadOrdersForCustomer"/>
+          <include name="testAddSkuToOrder"/>
+          <include name="removeBundleFromOrder"/>
+          <include name="removeFulfillmentGroupFromOrder"/>
+          <include name="testOrderPaymentInfos"/>
+          <include name="addPaymentToOrder"/>
+          <include name="getOrdersForCustomer"/>
+          <include name="findNamedOrderForCustomer"/>
+          <include name="findCurrentCartForCustomer"/>
+          <include name="updateItemsInOrder"/>
+          <include name="removeItemFromOrderAfterFulfillmentGroups"/>
+          <include name="testOrderProperties"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="findOrderByOrderNumber"/>
+          <include name="getItemsForOrder"/>
+          <include name="findDefaultFillmentGroupForOrder"/>
+          <include name="findFillmentGroupForOrderFirst"/>
+          <include name="testNamedOrderForCustomer"/>
+          <include name="addAnotherItemToOrder"/>
+          <include name="createCartForCustomer"/>
+          <include name="findCartForAnonymousCustomer"/>
+          <include name="removeItemFromOrder"/>
+          <include name="addItemToFulfillmentgroupSecond"/>
+          <include name="findCartForNullCustomerId"/>
+          <include name="testSubmitOrder"/>
+          <include name="addBundleToOrder"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="checkOrderItems"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.OrderTest -->
+      <class name="org.broadleafcommerce.inventory.test.SkuAvailabilityTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="checkAvailableQuantityWithNullQuantityOnHand"/>
+          <include name="checkAvailableQuantityWithNullReserveQty"/>
+          <include name="readAvailableSkusForLocation"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="readAvailableSkusForUnknownLocation"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="setup"/>
+          <include name="checkAvailableQuantityWithReserveAndQOH"/>
+          <include name="readSKUAvailabilityEntries"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="createSkuAvailability"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.inventory.test.SkuAvailabilityTest -->
+      <class name="org.broadleafcommerce.test.integration.FulfillmentGroupItemDaoTest">
+        <methods>
+          <include name="readFulfillmentGroupItemsForFulfillmentGroup"/>
+          <include name="readFulfillmentGroupItemsById"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="createFulfillmentGroupItem"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.FulfillmentGroupItemDaoTest -->
+      <class name="org.broadleafcommerce.test.integration.CategoryDaoTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.CategoryDaoTest -->
+      <class name="org.broadleafcommerce.profile.test.CustomerPhoneTest">
+        <methods>
+          <include name="createCustomerPhone"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="readCustomerPhoneByUserId"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.CustomerPhoneTest -->
+      <class name="org.broadleafcommerce.security.test.AdminUserTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.security.test.AdminUserTest -->
+      <class name="org.broadleafcommerce.profile.test.IdGenerationTest">
+        <methods>
+          <include name="createId"/>
+          <include name="createIdForBeginEndSequence"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="findIds"/>
+          <include name="findIdsForBeginEndSequence"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.IdGenerationTest -->
+      <class name="org.broadleafcommerce.test.integration.OrmTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.OrmTest -->
+      <class name="org.broadleafcommerce.test.integration.OrderItemDaoTest">
+        <methods>
+          <include name="readOrderItemsById"/>
+          <include name="readOrderItemsByIdAfterGiftWrapDeletion"/>
+          <include name="createGiftWrapOrderItem"/>
+          <include name="deleteGiftWrapOrderItemsById"/>
+          <include name="readGiftWrapOrderItemsById"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="createDiscreteOrderItem"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.OrderItemDaoTest -->
+      <class name="org.broadleafcommerce.security.test.AdminPermissionTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.security.test.AdminPermissionTest -->
+      <class name="org.broadleafcommerce.offer.test.OfferTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.offer.test.OfferTest -->
+      <class name="org.broadleafcommerce.test.integration.ProductDaoTest">
+        <methods>
+          <include name="testReadProductsWithCrossSaleValues"/>
+          <include name="createCrossSaleValues"/>
+          <include name="createProducts"/>
+          <include name="testFeaturedProduct"/>
+          <include name="testReadProductsByName"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="createUpSaleValues"/>
+          <include name="testProductAttributes"/>
+          <include name="testReadProductsById"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="testReadProductsWithUpSaleValues"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.ProductDaoTest -->
+      <class name="org.broadleafcommerce.profile.test.AddressTest">
+        <methods>
+          <include name="findStates"/>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="findCountryByShortName"/>
+          <include name="setup"/>
+          <include name="createCountry"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="findStateByAbbreviation"/>
+          <include name="springTestContextAfterTestMethod"/>
+          <include name="createState"/>
+          <include name="findCountries"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.profile.test.AddressTest -->
+      <class name="org.broadleafcommerce.security.test.AdminRoleTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.security.test.AdminRoleTest -->
+      <class name="org.broadleafcommerce.test.integration.PaymentInfoServiceTest">
+        <methods>
+          <include name="createPaymentInfo"/>
+          <include name="createTestPaymentInfo"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="readPaymentInfoByOrder"/>
+          <include name="readPaymentInfoById"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.test.integration.PaymentInfoServiceTest -->
+      <class name="org.broadleafcommerce.layout.test.PaginationCommandObjectTest">
+        <methods>
+          <include name="springTestContextBeforeTestClass"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="springTestContextAfterTestClass"/>
+          <include name="springTestContextPrepareTestInstance"/>
+          <include name="springTestContextBeforeTestMethod"/>
+          <include name="springTestContextAfterTestMethod"/>
+        </methods>
+      </class> <!-- org.broadleafcommerce.layout.test.PaginationCommandObjectTest -->
+    </classes>
+  </test> <!-- commerce-integrationtest(failed) -->
+</suite> <!-- Failed suite [BroadleafCommerce Test Suite] -->
